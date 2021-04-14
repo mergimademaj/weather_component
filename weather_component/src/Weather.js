@@ -51,13 +51,15 @@ const weatherData = {
     return(
         <>
             <h1> hello ole </h1>
-}
-            <Card title="Default size card" extra={<a href="#">More</a>} style={{ width: 300 }}>
+
+
+            <Card title={weatherData.weather.main} extra={<a href="#">More</a>} style={{ width: 300 }}>
                 <p>City: {weatherData.name}</p>
                 <p>Temp: {weatherData.main.temp}</p>
                 <p>Hum: {weatherData.main.humidity}</p>
-                <p>Sunrise: {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString("en-GB")}</p>
-                <p>Sunrise: {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString("en-GB")}</p>
+                <p>Sunrise: {new Date(weatherData.sys.sunrise * 1000).toLocaleString()}</p>
+                <p>Sunrise: {new Date(weatherData.sys.sunset * 1000).toLocaleString()}</p>
+
 
             </Card>
         </>
@@ -70,6 +72,6 @@ export default Weather;
 /*
 * Display sunset tiden også X
 * Rett bak tempraturen skal du legge til om det er farenheit eller celcius
-* Legg til weatherData.weather.main med tittel
-* Google toLocaleTimeString() og finn ut om du kan gjøre det om til en dato og ikke klokkeslett
+* Legg til weatherData.weather.main med tittel X (hva mente du her ?)
+* Google toLocaleTimeString() og finn ut om du kan gjøre det om til en dato og ikke klokkeslett X (ga deg begge deler ;) )
 * */
